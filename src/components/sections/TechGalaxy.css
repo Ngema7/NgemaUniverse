@@ -1,0 +1,18 @@
+.galaxy {
+  padding: 120px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* The Sora font class used inline by the component */
+.sora {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+}
+
+/* Responsive: shrink the 600×600 orbital viewport on small screens */
+@media (max-width: 640px) {
+  .galaxy .section {
+    padding: 80px 0;
+  }
+}

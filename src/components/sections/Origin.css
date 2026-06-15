@@ -1,0 +1,148 @@
+.origin {
+  padding: 120px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.origin__glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+  top: 20%;
+  left: -100px;
+  pointer-events: none;
+}
+
+.origin__header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: rgba(212,175,55,0.5);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* Timeline */
+.origin__timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.origin__line-wrap {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.origin__line {
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, #D4AF37, #8B5CF6, #3B82F6, transparent);
+  transform-origin: top;
+}
+
+.origin__item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: calc(50% + 40px);
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.origin__item--right {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: calc(50% + 40px);
+}
+
+.origin__dot {
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.origin__card {
+  max-width: 380px;
+  padding: 24px 28px;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.origin__card:hover {
+  transform: translateY(-4px);
+}
+
+.origin__year {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+
+.origin__title {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.origin__org {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.origin__desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(229,231,235,0.65);
+}
+
+@media (max-width: 768px) {
+  .origin__timeline {
+    padding-left: 40px;
+  }
+
+  .origin__line-wrap {
+    left: 0;
+    transform: none;
+  }
+
+  .origin__item,
+  .origin__item--right {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 40px;
+  }
+
+  .origin__dot {
+    left: -7px;
+    transform: none;
+  }
+
+  .origin__card {
+    max-width: 100%;
+    width: 100%;
+  }
+}

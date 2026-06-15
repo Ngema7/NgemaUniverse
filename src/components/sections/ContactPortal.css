@@ -1,0 +1,146 @@
+.contact {
+  padding: 120px 0 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact__glow {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto 80px;
+}
+
+.contact__card {
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact__hover-glow {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.contact__card:hover .contact__hover-glow {
+  opacity: 1;
+}
+
+.contact__icon {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.contact__info {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.contact__platform {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.contact__handle {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.05em;
+}
+
+.contact__arrow {
+  color: rgba(255,255,255,0.2);
+  font-size: 1rem;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.contact__card:hover .contact__arrow {
+  color: rgba(255,255,255,0.7);
+  transform: translateX(4px);
+}
+
+/* Footer */
+.contact__footer {
+  text-align: center;
+  padding-top: 60px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact__footer-logo {
+  display: flex;
+  align-items: center;
+  
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.6);
+}
+
+.contact__footer-mark {
+  width: 100px;
+  height: 100px;
+ 
+}
+
+.contact__footer-text {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.25);
+}
+
+.contact__copyright {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.15);
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 900px) {
+  .contact__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}

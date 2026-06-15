@@ -1,0 +1,88 @@
+.vision {
+  padding: 120px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.vision__glow {
+  position: absolute;
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(139,92,246,0.07) 0%, transparent 70%);
+  bottom: 20%;
+  right: 0;
+  pointer-events: none;
+}
+
+.vision__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.vision__quote {
+  max-width: 700px;
+  margin: 0 auto 72px;
+  padding: 36px 48px;
+  border-radius: 16px;
+  text-align: center;
+  border-left: 3px solid rgba(139,92,246,0.4);
+}
+
+.vision__quote-text {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(229,231,235,0.8);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.vision__quote-attr {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: rgba(139,92,246,0.7);
+  letter-spacing: 0.1em;
+}
+
+.vision__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.vision__card {
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.vision__icon {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.vision__card-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.vision__card-desc {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: rgba(229,231,235,0.6);
+}
+
+@media (max-width: 768px) {
+  .vision__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vision__quote {
+    padding: 28px 24px;
+  }
+}
