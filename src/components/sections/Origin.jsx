@@ -39,22 +39,7 @@ const TIMELINE = [
     accent: '#06B6D4',
   },
 
-  {
-    year: '2026',
-    title: 'EduSathi AI Development',
-    org: 'Flagship Product',
-    loc: 'Nepal',
-    desc: 'Launched EduSathi AI — a transformative educational platform designed to democratize learning across Nepal.',
-    accent: '#D4AF37',
-  },
-  {
-    year: '2026+',
-    title: 'Future Startup Founder Vision',
-    org: 'The Universe Awaits',
-    loc: 'Global',
-    desc: 'Building AI-powered platforms, global products, and a startup ecosystem from the mountains of Nepal to the world.',
-    accent: '#8B5CF6',
-  },
+
 ]
 
 export default function Origin() {

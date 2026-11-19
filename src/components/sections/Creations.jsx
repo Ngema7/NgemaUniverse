@@ -1,43 +1,27 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import './Creations.css'
 
 const PROJECTS = [
   {
     id: '01',
-    title: 'EduSathi AI',
-    type: 'Flagship Product',
-    desc: 'AI-powered educational platform revolutionizing how students in Nepal learn, practice, and grow. MCQ engine, AI tutor, progress tracking.',
-    tags: ['React', 'AI', 'Node.js', 'MongoDB'],
+    title: 'NGEMA UNIVERSE',
+    type: 'Portfolio Website',
+    desc: 'A cinematic personal portfolio showcasing my work, skills, and creative identity with smooth animations and an immersive experience.',
+    tags: ['React', 'Vite', 'Framer Motion', 'CSS'],
     accent: '#D4AF37',
     status: 'Live',
+    url: 'https://ngemauniverse.vercel.app',
   },
   {
     id: '02',
-    title: 'Notes System',
-    type: 'Full Stack App',
-    desc: 'A smart notes application with rich-text editing, tagging, and AI-assisted summarization for students and professionals.',
-    tags: ['MERN', 'GSAP', 'REST API'],
-    accent: '#8B5CF6',
-    status: 'Built',
-  },
-  {
-    id: '03',
-    title: 'SaaS Platform Ideas',
-    type: 'Concept & Prototype',
-    desc: 'A collection of SaaS product concepts targeting the education, productivity, and AI sectors with full UX blueprints.',
-    tags: ['UI/UX', 'Figma', 'React'],
+    title: 'Bhansaghar',
+    type: 'Restaurant Website',
+    desc: 'A modern restaurant website with an elegant menu showcase and a clean, responsive design built to welcome every guest.',
+    tags: ['React', 'Responsive', 'UI/UX', 'Vercel'],
     accent: '#3B82F6',
-    status: 'In Progress',
-  },
-  {
-    id: '04',
-    title: 'AI Experiments',
-    type: 'Research & Dev',
-    desc: 'A sandbox of AI integrations — chatbots, image analysis, prompt engineering, and LLM-powered tools built for real-world testing.',
-    tags: ['Python', 'AI API', 'React'],
-    accent: '#10B981',
-    status: 'Ongoing',
+    status: 'Live',
+    url: 'https://bhansaghar.vercel.app',
   },
 ]
 
@@ -54,7 +38,7 @@ export default function Creations() {
       <div className="creations__glow" />
       <div className="container">
         <div className="creations__header">
-          <span className="section-label">Section 04</span>
+          <span className="section-label">Section 02</span>
           <h2 className="text-display">
             Digital <span className="gradient-gold">Creations</span>
           </h2>
@@ -76,20 +60,69 @@ export default function Creations() {
             >
               <div className="creations__card-top">
                 <span className="creations__id" style={{ color: project.accent }}>{project.id}</span>
-                <span className="creations__status" style={{ color: STATUS_COLORS[project.status], borderColor: `${STATUS_COLORS[project.status]}30` }}>
+                <span
+                  className="creations__status"
+                  style={{ color: STATUS_COLORS[project.status], borderColor: `${STATUS_COLORS[project.status]}30` }}
+                >
                   <span className="creations__status-dot" style={{ background: STATUS_COLORS[project.status] }} />
                   {project.status}
                 </span>
               </div>
+
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="creations__preview"
+                style={{ borderColor: `${project.accent}30` }}
+                aria-label={`Open ${project.title}`}
+              >
+                <div className="creations__preview-bar">
+                  <span className="creations__preview-dots">
+                    <i /><i /><i />
+                  </span>
+                  <span className="creations__preview-url">
+                    {project.url.replace('https://', '')}
+                  </span>
+                </div>
+                <div className="creations__preview-frame">
+                  <iframe
+                    src={project.url}
+                    title={`${project.title} preview`}
+                    loading="lazy"
+                    tabIndex={-1}
+                    scrolling="no"
+                  />
+                  <div className="creations__preview-overlay" style={{ '--accent': project.accent }}>
+                    <span>Open Live Demo ↗</span>
+                  </div>
+                </div>
+              </a>
+
               <div className="creations__type">{project.type}</div>
               <h3 className="creations__title" style={{ color: project.accent }}>{project.title}</h3>
               <p className="creations__desc">{project.desc}</p>
+
               <div className="creations__tags">
                 {project.tags.map(tag => (
                   <span key={tag} className="creations__tag">{tag}</span>
                 ))}
               </div>
-              <div className="creations__card-glow" style={{ background: `radial-gradient(circle at 0% 0%, ${project.accent}15, transparent 60%)` }} />
+
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="creations__link"
+                style={{ color: project.accent, borderColor: `${project.accent}40` }}
+              >
+                Live Demo ↗
+              </a>
+
+              <div
+                className="creations__card-glow"
+                style={{ background: `radial-gradient(circle at 0% 0%, ${project.accent}15, transparent 60%)` }}
+              />
             </motion.div>
           ))}
         </div>
