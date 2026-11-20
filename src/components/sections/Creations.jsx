@@ -21,7 +21,7 @@ const PROJECTS = [
     tags: ['React', 'Responsive', 'UI/UX', 'Vercel'],
     accent: '#3B82F6',
     status: 'Live',
-    url: 'https://bhansaghar.vercel.app',
+    url: 'https://bhansaghar-black.vercel.app',
   },
 ]
 
